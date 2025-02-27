@@ -1,0 +1,247 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100vw;
+  min-height: 100vh; /* Минимальная высота = высота экрана */
+  overflow-y: auto; /* Вертикальный скролл только если нужно */
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+blockquote,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+
+:root {
+  --main-font: 'Roboto', sans-serif;
+  --secondary-font: 'Oswald', sans-serif;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  inline-size: 1px;
+  block-size: 1px;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.page {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 156px;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-family: var(--main-font);
+  background-image: url(../images/Background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+.page::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, transparent 60%, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+  z-index: -1;
+}
+
+.
+
+@keyframes gradient-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+.logo__content {
+  font-family: var(--main-font);
+  font-size: 78px;
+  font-weight: 700;
+  padding-bottom: 48px;
+  z-index: 2;
+  padding-top: 33px;
+  text-align: center; background: linear-gradient(90deg, #ff0000, #ff7300, #ff00ff, #00ffff);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-animation 5s infinite linear;
+}
+
+.header__menu {
+  display: flex;
+  justify-content: space-between;
+  gap: 57px;
+  align-items: center;
+}
+
+.header__menu-item {
+ color: #cacaca;
+ text-decoration: none;
+ font-size: 24px;
+ font-weight: 300;
+ border: 2px solid transparent;
+}
+
+.header__menu-list.active_menu-item .header__menu-item {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 14px 20px;
+}
+
+.auth__conainer-form {
+  max-width: 432px;
+  min-height: 440px;
+  background-color: rgba(49, 49, 49, 0.9);
+  border-radius: 12px;
+  padding: 0 28px;
+}
+
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth__content {
+  text-align: center;
+  font-size: 42px;
+  padding-bottom: 20px;
+  padding-top: 35px;
+}
+
+.content-title{
+  font-size: 18px;
+  padding-bottom: 5px;
+}
+
+.content-form {
+  width: 376px;
+  height: 39px;
+  background-color: rgba(40, 40, 40, 0.9);
+  margin-bottom: 20px;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 3px;
+  border: 1px solid #757575;
+}
+
+.content-form::placeholder {
+  color: #cacaca;
+  padding-left: 12px;
+  opacity: 0.6;
+}
+
+.auth__container__label {
+  display: flex;
+  gap: 8px;
+  padding-bottom: 33px;
+}
+
+.auth__container__pseudo-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #757575;
+  background-color: rgba(40, 40, 40, 0.9);
+  inline-size: 19px;
+  block-size: 19px;
+}
+
+.auth__container__checkbox:checked + .auth__container__pseudo-checkbox::after {
+  content: '';
+  background-color: #fff;
+  min-inline-size: 15px;
+  min-block-size: 15px;
+}
+
+.auth__container-button {
+  max-width: 376px;
+  min-height: 48px;
+  font-family: var(--main-font);
+  letter-spacing: 5px;
+  text-align: center;
+  color: #78350F;
+  background: linear-gradient(80deg, #FFD465, #F8A528);
+  font-size: 24px;
+  font-weight: 800;
+  border-bottom: 1px solid #78350F;
+  border-radius: 6px;
+}
+
+.auth__register {
+  display: block;
+  color: #cacaca;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 13px;
+  text-decoration: none;
+}
+
+.social__card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 56px;
+}
+
+.social__card-item {
+  text-decoration: none;
+  color: #fafafa;
+}
+
+.social__card__content {
+  display: flex;
+  gap: 16px;
+  padding: 16px 85px 16px 16px;
+  max-width: 238px;
+  min-height: 32px;
+  background-color: rgb(41, 41, 41);
+  border-radius: 12px;
+}
+
+.social__card-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.social__card-text {
+  font-size: 16px;
+  font-weight: 200;
+}
+
+.social__card-subtext {
+  font-size: 14px;
+  color: #757575
+}
