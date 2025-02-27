@@ -75,7 +75,7 @@ ol {
   z-index: -1;
 }
 
-.
+
 
 @keyframes gradient-animation {
   0% { background-position: 0% 50%; }
@@ -119,12 +119,20 @@ ol {
   padding: 14px 20px;
 }
 
-.auth__conainer-form {
-  max-width: 432px;
+.auth__container-form {
+  width: 435px; /* Заполняет доступное пространство */
+  max-width: 432px; /* Не больше 432px */
   min-height: 440px;
   background-color: rgba(49, 49, 49, 0.9);
   border-radius: 12px;
-  padding: 0 28px;
+  padding: 20px;
+}
+
+.auth__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 435px;
 }
 
 
@@ -146,8 +154,8 @@ ol {
 }
 
 .content-form {
-  width: 376px;
-  height: 39px;
+  max-width: 435px;
+  min-height: 39px;
   background-color: rgba(40, 40, 40, 0.9);
   margin-bottom: 20px;
   border: none;
@@ -244,4 +252,16 @@ ol {
 .social__card-subtext {
   font-size: 14px;
   color: #757575
+}
+
+
+@media (max-width: 480px) {
+  .auth__container-form {
+      max-width: 60%; /* Уменьшаем форму на мобильных */
+      padding: 15px;
+  }
+
+  .auth__content {
+      font-size: 32px;
+  }
 }
