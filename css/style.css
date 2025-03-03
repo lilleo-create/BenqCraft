@@ -8,6 +8,7 @@ html, body {
   width: 100vw;
   min-height: 100vh; /* Минимальная высота = высота экрана */
   overflow-y: auto; /* Вертикальный скролл только если нужно */
+  font-size: 62.5%;
 }
 
 
@@ -33,6 +34,7 @@ ol {
 
 
 :root {
+  font-size: 62,5px;
   --main-font: 'Roboto', sans-serif;
   --secondary-font: 'Oswald', sans-serif;
 }
@@ -102,6 +104,7 @@ ol {
   justify-content: space-between;
   gap: 57px;
   align-items: center;
+  padding-bottom: 40px;
 }
 
 .header__menu-item {
@@ -132,6 +135,7 @@ ol {
   justify-content: center;
   align-items: center;
   max-width: 435px;
+  padding-bottom: 50px;
 }
 
 
@@ -142,7 +146,7 @@ ol {
 
 .auth__content {
   text-align: center;
-  font-size: 42px;
+  font-size: 4.2rem;
   padding-bottom: 20px;
   padding-top: 35px;
 }
@@ -156,6 +160,9 @@ ol {
   max-width: 435px;
   min-height: 39px;
   background-color: rgba(40, 40, 40, 0.9);
+  color: #fff;
+  font-size: 16px;
+  padding-left: 20px;
   margin-bottom: 20px;
   border: none;
   -webkit-appearance: none;
@@ -167,14 +174,15 @@ ol {
 
 .content-form::placeholder {
   color: #cacaca;
-  padding-left: 12px;
   opacity: 0.6;
 }
 
 .auth__container__label {
   display: flex;
+  font-size: 1.4rem;
   gap: 8px;
-  padding-bottom: 33px;
+  padding-bottom: 24px;
+  padding-left: 10px;
 }
 
 .auth__container__pseudo-checkbox {
@@ -195,8 +203,8 @@ ol {
 }
 
 .auth__container-button {
-  max-width: 376px;
-  min-height: 48px;
+  width: 376px;
+  height: 40px;
   font-family: var(--main-font);
   letter-spacing: 5px;
   text-align: center;
@@ -208,13 +216,20 @@ ol {
   border-radius: 6px;
 }
 
+.auth__form-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .auth__register {
   display: block;
   color: #cacaca;
   text-align: center;
   margin: 0 auto;
-  padding-top: 13px;
+  padding-top: 21px;
   text-decoration: none;
+  font-size: 1.6rem;
 }
 
 .social__card {
@@ -275,3 +290,5 @@ ol {
       font-size: 32px;
   }
 }
+
+
