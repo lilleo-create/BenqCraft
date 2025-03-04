@@ -35,8 +35,8 @@ ol {
 
 :root {
   font-size: 62,5px;
-  --main-font: 'Roboto', sans-serif;
-  --secondary-font: 'Oswald', sans-serif;
+  --pixel-fonts: "Pixelify Sans", sans-serif;
+  --main-fonts: "Raleway", sans-serif;
 }
 
 .visually-hidden {
@@ -51,19 +51,20 @@ ol {
 
 .page {
   display: flex;
-  align-items: center;
   flex-direction: column;
   margin: 0 auto;
   width: 100%;
   height: 100%;
   color: #fff;
-  font-family: var(--main-font);
-  background-image: url(../images/Background.png);
+  font-family: var(--main-fonts);
+  background-image: url(../images/15ce674bdfe50ed_big.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
+  overflow: hidden;
 }
+
 
 .page::after {
   content: "";
@@ -72,72 +73,165 @@ ol {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, transparent 60%, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+  background: rgba(0, 0, 0, 0.5);
   z-index: -1;
 }
 
+/* ---ШАПКА--- */
 
-
-@keyframes gradient-animation {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 50px;
+  min-height: 70px;
 }
 
 
 .logo__content {
   font-family: var(--main-font);
-  font-size: 78px;
+  font-size: 5.4rem;
   font-weight: 700;
-  padding-bottom: 48px;
   z-index: 2;
-  padding-top: 33px;
-  text-align: center; background: linear-gradient(90deg, #ff0000, #ff7300, #ff00ff, #00ffff);
   background-size: 300% 300%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradient-animation 5s infinite linear;
+}
+
+.logo__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo__container-link {
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+}
+
+
+.logo__vontent-black {
+  color: #F8A528;
+}
+
+.logo__content-subtitle {
+  font-size: 2.4rem;
+  color: #F8A528;
+}
+
+.logo__content-subtitle-orange {
+  color: #fff;
 }
 
 .header__menu {
   display: flex;
-  justify-content: space-between;
-  gap: 57px;
   align-items: center;
-  padding-bottom: 40px;
+  gap: 57px;
+  z-index: 1;
+}
+
+.header__menu-button {
+    display: none; /* По умолчанию скрываем кнопку */
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 50px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    right: 20px;
+    z-index: 10;
+    padding: 0;
+}
+
+/* Полоски внутри кнопки */
+.header__menu-button span {
+    display: block;
+    width: 100%;
+    height: 6px;
+    background-color: #F8A528;
+    border-radius: 5px;
+    transition: 0.3s;
 }
 
 .header__menu-item {
- color: #cacaca;
- text-decoration: none;
- font-size: 24px;
- font-weight: 300;
- border: 2px solid transparent;
+  color: #F8A528;
+  text-decoration: none;
+  font-size: 2.4rem;
+  font-family: var(--pixel-fonts);
+  font-weight: 300;
+  border: 2px solid transparent;
 }
 
 .header__menu-list.active_menu-item .header__menu-item {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(238, 233, 233, 0.2);
   border-radius: 8px;
   padding: 14px 20px;
+  color: #fff;
 }
 
+/* --Секция приветственная-- */
+
+
+.presentation__container {
+  display: flex;
+  max-width: 1000px;
+  height: 550px;
+  position: relative;
+}
+
+.presentation__container-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.presentation__container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 0;
+}
+
+.presentation__container-text {
+  max-width: 800px;
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  color: #eeecec;
+  font-size: 8.2rem;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px #F8A528 ; 
+  z-index: 1;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+}
+
+/* -----ФОРМА------ */
+
 .auth__container-form {
-  width: 435px; /* Заполняет доступное пространство */
-  max-width: 432px; /* Не больше 432px */
-  min-height: 440px;
-  background-color: rgba(49, 49, 49, 0.9);
+  max-width: 300px; /* Не больше 432px */
+  height: 550px;
+  background-color: rgba(49, 49, 49, 9);
   border-radius: 12px;
   padding: 20px;
 }
 
-.auth__container {
+.welcome__container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 435px;
+  justify-content: space-between;
+  margin: 0 50px;
+  padding-top: 20px;
   padding-bottom: 50px;
+  flex-wrap: wrap;
 }
-
 
 .form {
   display: flex;
@@ -145,10 +239,12 @@ ol {
 }
 
 .auth__content {
-  text-align: center;
-  font-size: 4.2rem;
+  font-size: 3.2rem;
   padding-bottom: 20px;
+  font-family: var(--main-fonts);
   padding-top: 35px;
+  z-index: 2;
+  text-align: center;
 }
 
 .content-title{
@@ -203,16 +299,17 @@ ol {
 }
 
 .auth__container-button {
-  width: 376px;
+  width: 300px;
   height: 40px;
   font-family: var(--main-font);
   letter-spacing: 5px;
+  align-items: center;
   text-align: center;
   color: #78350F;
-  background: linear-gradient(80deg, #FFD465, #F8A528);
+  background:#F8A528;
   font-size: 24px;
   font-weight: 800;
-  border-bottom: 1px solid #78350F;
+  border: none;
   border-radius: 6px;
 }
 
@@ -280,15 +377,39 @@ ol {
 
 
 
-@media (max-width: 480px) {
-  .auth__container-form {
-      max-width: 60%; /* Уменьшаем форму на мобильных */
-      padding: 15px;
-  }
+@media (max-width: 956px) {
+  .header__menu-button {
+    display: flex;
+  
+}
 
-  .auth__content {
-      font-size: 32px;
-  }
+.header__menu-list {
+    display: none;
+}
+
+.header__menu.open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Затемнение фона */
+    z-index: 9;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__menu.open .header__menu-list {
+    display: block;
+}
+
+.header__menu.open .header__menu-button {
+  position: absolute;
+  top: 15px; /* Чтобы кнопка не смещалась вниз */
+  right: 70px;
+}
 }
 
 

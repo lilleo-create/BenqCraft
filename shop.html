@@ -5,26 +5,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BenqCraft</title>
+  <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/shop.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Pixelify+Sans:wght@400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+  
 </head>
 
-<body class="shop__page">
+<body class="page">
+  
   <header class="header">
-    <h1 class="logo__content">BenqCraft</h1>
-    <ul class="header__menu">
+    <div class="logo__container">
+      <a href="./index.html" class="logo__container-link">
+      <h1 class="logo__content"><span class="logo__vontent-black">Benq</span>Craft</h1>
+      <p class="logo__content-subtitle"><span class="logo__content-subtitle-orange">M</span>C</p>
+      </a>
+    </div>
+    
+
+    <ul class="header__menu open">
       <li class="header__menu-list active_menu-item">
-        <a href="./shop.html" class="header__menu-item">Магазин</a>
+        <a href="/shop.html" class="header__menu-item">Магазин</a>
       </li>
       <li class="header__menu-list">
-        <a href="./index.html" class="header__menu-item">Играть</a>
+        <a href="/index.html" class="header__menu-item">Играть</a>
       </li>
       <li class="header__menu-list">
         <a href="#" class="header__menu-item">Форум</a>
@@ -35,7 +41,11 @@
       <li class="header__menu-list">
         <a href="#" class="header__menu-item">FAQ</a>
       </li>
-
+      <button class="header__menu-button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button> 
     </ul>
   </header>
 

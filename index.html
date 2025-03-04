@@ -7,21 +7,23 @@
   <title>BenqCraft</title>
   <link rel="stylesheet" href="./css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Pixelify+Sans:wght@400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
 </head>
 
 <body class="page">
+  
   <header class="header">
-    <h1 class="logo__content">BenqCraft</h1>
-    <ul class="header__menu">
+    <div class="logo__container">
+      <a href="./index.html" class="logo__container-link">
+      <h1 class="logo__content"><span class="logo__vontent-black">Benq</span>Craft</h1>
+      <p class="logo__content-subtitle"><span class="logo__content-subtitle-orange">M</span>C</p>
+      </a>
+    </div>
+    
+
+    <ul class="header__menu open">
       <li class="header__menu-list">
         <a href="/shop.html" class="header__menu-item">Магазин</a>
       </li>
@@ -37,19 +39,27 @@
       <li class="header__menu-list">
         <a href="#" class="header__menu-item">FAQ</a>
       </li>
-      
+      <button class="header__menu-button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button> 
     </ul>
   </header>
 
-  <section class="auth__container">
+  <section class="welcome__container">
+    <div class="presentation__container">
+      <p class="presentation__container-text">Добро пожаловать на сервер BenqCraft</p>
+      <img class="presentation__container-img" src="./images/57be9cbcc54d0db6f15130cddc7a66d1.jpg" alt="">
+    </div>
     <div class="auth__container-form">
-      <h2 class="auth__content">Вход</h2>
+      <h2 class="auth__content">Авторизация</h2>
       <form class="form">
         <label class="content-title" for="textarea">Ник в игре</label>
         <input class="content-form" id="" name="textarea" type="textarea" required autocomplete
           placeholder="Ваш ник">
         <label class="content-title" for="password">Пароль</label>
-        <input class="content-form" id="password" name="password" type="password" autocomplete required>
+        <input class="content-form" id="password" name="password" type="password" autocomplete required placeholder="Пароль">
         <label class="auth__container__label">
           <input type="checkbox" name="time" value="auth" class="auth__container__checkbox visually-hidden" />
           <span class="auth__container__pseudo-checkbox"></span>
@@ -63,6 +73,8 @@
       <a class="auth__register" href="#">Не помню пароль</a>
     </div>
   </section>
+
+  <script src="./script.js"></script>
   <!-- <section class="card">
     <ul class="social__card">
       <li class="social__card-list">
